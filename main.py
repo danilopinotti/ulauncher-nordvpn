@@ -140,7 +140,7 @@ class KeywordQueryEventListener(EventListener):
 
         argument = event.get_argument() or ""
         command, country_query = (argument.split(" ") + [None])[:2]
-        if command in ["connect"]:
+        if command in ["connect", "c"]:
             items.extend(extension.get_country_ext_result_items(country_query))
             return RenderResultListAction(items)
 
